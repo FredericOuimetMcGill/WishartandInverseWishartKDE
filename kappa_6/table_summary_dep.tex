@@ -1,0 +1,100 @@
+%%% TABLE 1
+\begin{table}[!ht]
+\caption{Comparison of the Wishart (W), inverse-Wishart (IW), log-Gaussian (LG), and Gaussian (G) methods in terms of the mean, median, standard deviation (SD), and interquartile range (IQR) of $1024$ RISE values ($\times 10^5$) with $\kappa = 6$ for different configurations of autoregressive coefficient matrices ($M_i, \, i\in \{1,2,3\}$), innovation covariance matrices ($\Sigma_j, \, j\in \{1,2,3\}$), and sample sizes $n \in \{100, 200, 300\}$. Dark gray cells indicate the smallest value among the 8 competitors for the corresponding model, sample size, and statistic; light gray cells indicate the second smallest.}
+\label{tab:summary}
+
+\fontsize{7.9}{7}\selectfont\renewcommand{\arraystretch}{0}
+\setlength{\tabcolsep}{1.2pt}
+\setlength{\aboverulesep}{0.35ex}
+\setlength{\belowrulesep}{0.35ex}
+\centering
+{
+\begin{tabular}{@{}cc|ccc|ccc|ccc|ccc@{}}
+\toprule
+\multicolumn{2}{c|}{} & $n = 100$ & $n = 200$ & $n = 300$ & $n = 100$ & $n = 200$ & $n = 300$ & $n = 100$ & $n = 200$ & $n = 300$ & $n = 100$ & $n = 200$ & $n = 300$ \\
+\cmidrule(r){1-2}\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(lr){9-11}\cmidrule(l){12-14}
+Model & Method & \multicolumn{3}{c|}{Mean RISE} & \multicolumn{3}{c|}{Median RISE} & \multicolumn{3}{c|}{SD RISE} & \multicolumn{3}{c}{IQR RISE} \\
+\midrule
+$(M_1,\Sigma_1)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 1282 & 1100 & 1006 & 1250 & 1086 & 999 & 271 & 190 & 171 & 316 & \cellcolor{black!10}224 & 196 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 1281 & 1108 & 1013 & 1238 & 1090 & 998 & 268 & 193 & \cellcolor{black!10}163 & 317 & 233 & \cellcolor{black!30}191 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!30}1245 & \cellcolor{black!30}1086 & \cellcolor{black!30}989 & \cellcolor{black!10}1221 & \cellcolor{black!30}1073 & \cellcolor{black!30}981 & 266 & 194 & 180 & 339 & 229 & 198 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!10}1265 & \cellcolor{black!10}1091 & \cellcolor{black!10}992 & \cellcolor{black!30}1211 & \cellcolor{black!10}1078 & \cellcolor{black!10}982 & 290 & 203 & 173 & 342 & 236 & \cellcolor{black!10}195 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 1512 & 1306 & 1200 & 1430 & 1258 & 1166 & 425 & 281 & 237 & 515 & 342 & 251 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & 1349 & 1144 & 1038 & 1291 & 1111 & 1014 & 355 & 236 & 193 & 393 & 265 & 217 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 1989 & 1899 & 1870 & 1941 & 1858 & 1872 & \cellcolor{black!10}202 & \cellcolor{black!10}187 & 175 & \cellcolor{black!10}242 & 262 & 244 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 2137 & 2087 & 2072 & 2144 & 2088 & 2070 & \cellcolor{black!30}133 & \cellcolor{black!30}146 & \cellcolor{black!30}142 & \cellcolor{black!30}155 & \cellcolor{black!30}197 & 211 \\ 
+\midrule
+$(M_1,\Sigma_2)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 1839 & 1553 & 1404 & 1781 & \cellcolor{black!10}1519 & 1374 & 424 & 296 & 245 & 449 & 349 & 269 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & \cellcolor{black!10}1830 & 1557 & 1402 & 1780 & 1533 & 1382 & 406 & \cellcolor{black!10}282 & \cellcolor{black!30}219 & 488 & \cellcolor{black!10}347 & \cellcolor{black!10}263 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!30}1824 & \cellcolor{black!10}1547 & \cellcolor{black!30}1384 & \cellcolor{black!30}1763 & \cellcolor{black!30}1516 & \cellcolor{black!30}1356 & 445 & 355 & 250 & 477 & 358 & 293 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & 1836 & \cellcolor{black!30}1546 & \cellcolor{black!10}1390 & \cellcolor{black!10}1776 & 1529 & \cellcolor{black!10}1364 & 440 & 288 & \cellcolor{black!10}230 & 495 & 351 & 279 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 2301 & 1967 & 1759 & 2143 & 1894 & 1706 & 751 & 406 & 306 & 736 & 478 & 374 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & 2016 & 1711 & 1531 & 1919 & 1650 & 1499 & 469 & 316 & 243 & 502 & 353 & 275 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 3270 & 3159 & 3064 & 3263 & 3127 & 3031 & \cellcolor{black!10}395 & \cellcolor{black!30}247 & 245 & \cellcolor{black!10}154 & \cellcolor{black!30}112 & \cellcolor{black!30}107 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 2719 & 2815 & 2864 & 2556 & 2554 & 2577 & \cellcolor{black!30}382 & 442 & 436 & \cellcolor{black!30}98 & 834 & 823 \\ 
+\midrule
+$(M_1,\Sigma_3)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 3598 & \cellcolor{black!10}3021 & 2724 & 3442 & 2945 & \cellcolor{black!30}2606 & 842 & \cellcolor{black!10}578 & \cellcolor{black!10}510 & 909 & 637 & 554 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 3599 & 3027 & \cellcolor{black!10}2722 & \cellcolor{black!10}3429 & 2945 & 2625 & 848 & 595 & 537 & 941 & 668 & 572 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!30}3542 & \cellcolor{black!30}3019 & 2730 & 3434 & \cellcolor{black!10}2935 & 2639 & 812 & 612 & 520 & 910 & 697 & 578 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!10}3546 & 3027 & \cellcolor{black!30}2721 & \cellcolor{black!30}3422 & \cellcolor{black!30}2934 & \cellcolor{black!10}2621 & 830 & 634 & 576 & 920 & 682 & 587 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 4843 & 4224 & 3845 & 4587 & 4115 & 3752 & 1157 & 775 & 616 & 1282 & 950 & 705 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & 4483 & 3749 & 3385 & 4212 & 3624 & 3280 & 1060 & 679 & 552 & 1140 & 654 & 513 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 6763 & 6738 & 6657 & 6688 & 6578 & 6477 & \cellcolor{black!10}586 & 728 & 701 & \cellcolor{black!10}140 & \cellcolor{black!10}131 & \cellcolor{black!10}125 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 6906 & 6895 & 6870 & 6907 & 6894 & 6883 & \cellcolor{black!30}65 & \cellcolor{black!30}235 & \cellcolor{black!30}193 & \cellcolor{black!30}51 & \cellcolor{black!30}93 & \cellcolor{black!30}120 \\ 
+\midrule
+$(M_2,\Sigma_1)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 4308 & 3648 & 3298 & 4247 & 3632 & 3291 & 690 & 493 & \cellcolor{black!10}405 & \cellcolor{black!10}743 & \cellcolor{black!10}552 & \cellcolor{black!10}522 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & \cellcolor{black!10}4287 & 3659 & 3304 & 4248 & 3620 & 3296 & 713 & 503 & 419 & 792 & 573 & 541 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & 4297 & \cellcolor{black!10}3644 & \cellcolor{black!10}3296 & 4231 & 3613 & \cellcolor{black!10}3276 & 749 & \cellcolor{black!10}482 & 412 & 783 & 592 & 532 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & 4307 & 3650 & 3305 & \cellcolor{black!10}4226 & \cellcolor{black!10}3609 & 3282 & 870 & 525 & 440 & 810 & 621 & 545 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 4815 & 4009 & 3617 & 4555 & 3884 & 3538 & 1225 & 791 & 655 & 1380 & 960 & 763 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!30}4122 & \cellcolor{black!30}3431 & \cellcolor{black!30}3073 & \cellcolor{black!30}3999 & \cellcolor{black!30}3381 & \cellcolor{black!30}3057 & 827 & 563 & 428 & 972 & 652 & 526 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 5318 & 4705 & 4387 & 5305 & 4685 & 4386 & \cellcolor{black!30}398 & \cellcolor{black!30}282 & \cellcolor{black!30}238 & \cellcolor{black!30}506 & \cellcolor{black!30}387 & \cellcolor{black!30}315 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 6125 & 5501 & 5169 & 6075 & 5425 & 5112 & \cellcolor{black!10}590 & 548 & 497 & 814 & 700 & 595 \\ 
+\midrule
+$(M_2,\Sigma_2)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 7024 & 5990 & 5448 & 6937 & 5938 & 5413 & \cellcolor{black!10}1027 & \cellcolor{black!10}809 & \cellcolor{black!10}669 & \cellcolor{black!10}1287 & \cellcolor{black!10}972 & \cellcolor{black!10}796 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 7003 & 5988 & 5440 & 6918 & 5939 & 5396 & 1048 & 888 & 676 & 1318 & 1008 & 861 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & 6995 & \cellcolor{black!10}5961 & 5428 & 6930 & \cellcolor{black!10}5906 & 5402 & 1120 & 842 & 674 & 1363 & 1029 & 834 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!10}6966 & 5979 & \cellcolor{black!10}5407 & \cellcolor{black!10}6849 & 5919 & \cellcolor{black!10}5385 & 1144 & 854 & 740 & 1408 & 1037 & 908 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 7910 & 6680 & 6006 & 7486 & 6458 & 5857 & 2041 & 1373 & 1059 & 2306 & 1558 & 1272 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!30}6737 & \cellcolor{black!30}5654 & \cellcolor{black!30}5136 & \cellcolor{black!30}6647 & \cellcolor{black!30}5575 & \cellcolor{black!30}5077 & 1205 & 922 & 733 & 1490 & 1063 & 856 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 9856 & 8877 & 8335 & 9897 & 8915 & 8374 & \cellcolor{black!30}788 & \cellcolor{black!30}557 & \cellcolor{black!30}602 & \cellcolor{black!30}803 & \cellcolor{black!30}669 & \cellcolor{black!30}535 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 10947 & 10118 & 9651 & 10990 & 10114 & 9620 & 1279 & 1125 & 1016 & 1552 & 1250 & 1193 \\ 
+\midrule
+$(M_2,\Sigma_3)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 18229 & 15426 & 14190 & 17906 & 15397 & 14106 & \cellcolor{black!30}3349 & \cellcolor{black!30}2696 & \cellcolor{black!30}2171 & \cellcolor{black!30}4003 & 3258 & 2602 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 18226 & 15617 & 14248 & 17691 & 15552 & 14151 & 4838 & \cellcolor{black!10}2701 & \cellcolor{black!10}2279 & \cellcolor{black!10}4202 & 3221 & 2655 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!10}17260 & \cellcolor{black!10}15020 & \cellcolor{black!30}13863 & \cellcolor{black!10}17134 & \cellcolor{black!30}15014 & \cellcolor{black!30}13812 & \cellcolor{black!10}3630 & 2952 & 2472 & 4329 & 3423 & 2941 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}17088 & \cellcolor{black!30}14981 & \cellcolor{black!10}13892 & \cellcolor{black!30}16841 & \cellcolor{black!10}15042 & \cellcolor{black!10}13855 & 3713 & 3175 & 2534 & 4258 & 3541 & 3022 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 20391 & 18863 & 17463 & 19899 & 18594 & 17476 & 4855 & 3920 & 3279 & 6128 & 4781 & 4026 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & 19159 & 16489 & 15051 & 18852 & 16391 & 14898 & 3819 & 2943 & 2351 & 4653 & 3411 & 2799 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 26935 & 27520 & 27044 & 29999 & 28832 & 27807 & 5550 & 4700 & 4397 & 9917 & \cellcolor{black!30}1457 & \cellcolor{black!30}1086 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 32179 & 31668 & 31104 & 32559 & 31798 & 31293 & 6649 & 5662 & 5022 & 15505 & \cellcolor{black!10}2150 & \cellcolor{black!10}1895 \\ 
+\midrule
+$(M_3,\Sigma_1)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 3925 & 3324 & \cellcolor{black!10}2990 & 3840 & 3312 & 2982 & 719 & 430 & \cellcolor{black!10}356 & 714 & 553 & \cellcolor{black!10}451 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & \cellcolor{black!10}3906 & 3323 & 2991 & \cellcolor{black!10}3817 & 3312 & \cellcolor{black!10}2977 & 611 & \cellcolor{black!10}426 & 380 & 731 & \cellcolor{black!10}539 & 470 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & 3916 & 3321 & 2994 & 3861 & 3313 & 2990 & 742 & 428 & 360 & 753 & 566 & 460 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & 3922 & \cellcolor{black!10}3308 & 2994 & 3839 & \cellcolor{black!10}3297 & 2984 & 695 & 460 & 392 & 784 & 580 & 481 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 4366 & 3662 & 3295 & 4103 & 3554 & 3199 & 1176 & 720 & 597 & 1233 & 798 & 683 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!30}3764 & \cellcolor{black!30}3136 & \cellcolor{black!30}2801 & \cellcolor{black!30}3672 & \cellcolor{black!30}3081 & \cellcolor{black!30}2769 & 773 & 481 & 383 & 867 & 625 & 488 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 5230 & 4695 & 4380 & 5226 & 4700 & 4392 & \cellcolor{black!30}335 & \cellcolor{black!30}269 & \cellcolor{black!30}232 & \cellcolor{black!30}394 & \cellcolor{black!30}334 & \cellcolor{black!30}295 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 5964 & 5493 & 5209 & 5922 & 5456 & 5168 & \cellcolor{black!10}466 & 493 & 458 & \cellcolor{black!10}645 & 609 & 577 \\ 
+\midrule
+$(M_3,\Sigma_2)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 6265 & 5324 & 4864 & 6157 & 5278 & 4806 & 1035 & \cellcolor{black!10}752 & \cellcolor{black!10}644 & \cellcolor{black!10}1191 & \cellcolor{black!30}916 & \cellcolor{black!30}776 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 6235 & 5333 & 4857 & 6146 & 5275 & 4807 & \cellcolor{black!10}951 & 765 & 671 & \cellcolor{black!30}1149 & \cellcolor{black!10}928 & 796 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & 6164 & \cellcolor{black!10}5262 & 4794 & 6073 & 5208 & \cellcolor{black!10}4731 & 1105 & 776 & 666 & 1241 & 1008 & 805 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!10}6144 & 5270 & \cellcolor{black!10}4792 & \cellcolor{black!10}6054 & \cellcolor{black!10}5196 & 4747 & 1034 & 867 & 714 & 1267 & 1023 & 843 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 6996 & 5971 & 5455 & 6680 & 5762 & 5317 & 1653 & 1223 & 963 & 1820 & 1352 & 1086 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!30}6108 & \cellcolor{black!30}5152 & \cellcolor{black!30}4697 & \cellcolor{black!30}5948 & \cellcolor{black!30}5061 & \cellcolor{black!30}4632 & 1087 & 775 & 692 & 1274 & 967 & \cellcolor{black!10}778 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 8997 & 8311 & 7872 & 8962 & 8232 & 7873 & \cellcolor{black!30}826 & \cellcolor{black!30}654 & \cellcolor{black!30}608 & 1208 & 1029 & 971 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 9072 & 8879 & 8599 & 9089 & 8973 & 8665 & 1501 & 1296 & 1165 & 1560 & 1484 & 1345 \\ 
+\midrule
+$(M_3,\Sigma_3)$ & $\mathrm{W}_{\mathrm{lscv}}$ & 14400 & 12347 & 11470 & 14565 & 12593 & 11730 & \cellcolor{black!30}2912 & \cellcolor{black!30}2481 & \cellcolor{black!30}2072 & \cellcolor{black!30}3607 & \cellcolor{black!30}3174 & \cellcolor{black!30}2449 \\ 
+ & $\mathrm{W}_{\mathrm{lcv}}$ & 14239 & 12376 & 11323 & 14227 & 12649 & 11618 & \cellcolor{black!10}3096 & \cellcolor{black!10}2552 & \cellcolor{black!10}2216 & \cellcolor{black!10}3786 & \cellcolor{black!10}3389 & \cellcolor{black!10}2760 \\ 
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!10}12713 & \cellcolor{black!10}10981 & \cellcolor{black!10}10066 & \cellcolor{black!10}12176 & \cellcolor{black!10}10474 & \cellcolor{black!10}9699 & 3304 & 2724 & 2457 & 4794 & 4458 & 4037 \\ 
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}12550 & \cellcolor{black!30}10759 & \cellcolor{black!30}9892 & \cellcolor{black!30}11928 & \cellcolor{black!30}10120 & \cellcolor{black!30}9329 & 3335 & 2764 & 2436 & 4467 & 4105 & 3756 \\ 
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & 14619 & 12335 & 11289 & 13870 & 11669 & 10663 & 4115 & 2918 & 2695 & 4805 & 3717 & 3131 \\ 
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & 14382 & 11846 & 10741 & 13906 & 11044 & 9864 & 4032 & 2885 & 2725 & 5627 & 4750 & 4210 \\ 
+ & $\mathrm{G}_{\mathrm{lscv}}$ & 22619 & 22433 & 22191 & 20047 & 19254 & 18726 & 4728 & 4835 & 4580 & 8432 & 8203 & 8048 \\ 
+ & $\mathrm{G}_{\mathrm{lcv}}$ & 25986 & 24911 & 24222 & 22224 & 21968 & 21656 & 5907 & 5639 & 5543 & 8879 & 8600 & 8450 \\ 
+\bottomrule
+\end{tabular}}
+\end{table}
