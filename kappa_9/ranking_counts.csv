@@ -1,0 +1,9 @@
+"kappa","Method","Mean_minimum","Median_minimum","SD_minimum","IQR_minimum","Mean_within_2pct","Median_within_2pct","SD_within_2pct","IQR_within_2pct","Mean_within_5pct","Median_within_5pct","SD_within_5pct","IQR_within_5pct"
+9,"W_lscv",0,0,4,4,9,11,8,8,23,24,14,12
+9,"IW_lscv",0,1,0,0,16,18,1,2,24,24,6,5
+9,"W_lcv",2,1,13,3,15,16,16,10,25,24,20,15
+9,"IW_lcv",16,16,2,2,22,22,5,4,27,27,14,7
+9,"LG_lcv",9,9,6,18,9,9,14,22,13,11,19,23
+9,"LG_lscv",0,0,2,0,0,0,2,1,0,0,2,2
+9,"G_lscv",0,0,---,---,0,0,---,---,0,0,---,---
+9,"G_lcv",0,0,---,---,0,0,---,---,0,0,---,---

@@ -1,0 +1,75 @@
+\begin{table}[!htp]
+\caption{Numbers of configurations in which the Wishart (W), inverse-Wishart (IW), log-Gaussian (LG), and Gaussian (G) methods attain the minimum or fall within the indicated percentage of the minimum for each RISE summary statistic, for $\kappa\in\{4,5,6,7,8,9\}$. The summaries are the mean, median, standard deviation (SD), and interquartile range (IQR) of $1024$ RISE values for each method, model, and sample size. For each $\kappa$, the $27$ configurations combine the $9$ matrix pairs $(M_i,\Sigma_j)$, $i,j\in\{1,2,3\}$, with the $3$ sample sizes $n\in\{100,200,300\}$. Here $M_i$ and $\Sigma_j$ are the autoregressive coefficient and innovation covariance matrices, respectively. Dark and light gray cells indicate the highest and second-highest distinct counts, respectively, within each $\kappa$ and column.}
+\label{tab:ranking.counts}
+\centering
+\fontsize{7.9}{7}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.15}
+\begin{tabular}{clcccccccccccc}
+\toprule
+$\kappa$ & Method & \multicolumn{4}{c}{Minimum} & \multicolumn{4}{c}{Within $2\%$ of the minimum} & \multicolumn{4}{c}{Within $5\%$ of the minimum} \\
+\cmidrule(lr){3-6}\cmidrule(lr){7-10}\cmidrule(lr){11-14}
+ &  & Mean & Median & SD$^{*}$ & IQR$^{*}$ & Mean & Median & SD$^{*}$ & IQR$^{*}$ & Mean & Median & SD$^{*}$ & IQR$^{*}$ \\
+\midrule
+$4$ & $\mathrm{W}_{\mathrm{lscv}}$ & \cellcolor{black!10}$8$ & $3$ & \cellcolor{black!30}$21$ & \cellcolor{black!30}$23$ & \cellcolor{black!10}$12$ & $9$ & \cellcolor{black!30}$22$ & \cellcolor{black!30}$26$ & \cellcolor{black!10}$24$ & \cellcolor{black!10}$22$ & \cellcolor{black!30}$23$ & \cellcolor{black!30}$27$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!30}$19$ & \cellcolor{black!30}$14$ & \cellcolor{black!10}$5$ & \cellcolor{black!10}$4$ & \cellcolor{black!30}$27$ & \cellcolor{black!30}$23$ & \cellcolor{black!10}$7$ & \cellcolor{black!10}$7$ & \cellcolor{black!30}$27$ & \cellcolor{black!30}$27$ & \cellcolor{black!10}$19$ & \cellcolor{black!10}$13$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $0$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ & $0$ & $0$ & $5$ & $1$ & $0$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & $0$ & $1$ & $0$ & $0$ & $0$ & $2$ & $0$ & $0$ & $1$ & $9$ & $0$ & $0$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & $0$ & \cellcolor{black!10}$9$ & $0$ & $0$ & $3$ & \cellcolor{black!10}$11$ & $0$ & $0$ & $7$ & $21$ & $0$ & $0$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $1$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\midrule
+$5$ & $\mathrm{W}_{\mathrm{lscv}}$ & $0$ & $0$ & \cellcolor{black!30}$17$ & \cellcolor{black!30}$19$ & $11$ & $8$ & \cellcolor{black!30}$18$ & \cellcolor{black!30}$23$ & \cellcolor{black!10}$21$ & $17$ & \cellcolor{black!30}$21$ & \cellcolor{black!30}$24$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!30}$13$ & \cellcolor{black!10}$10$ & \cellcolor{black!10}$7$ & $2$ & \cellcolor{black!30}$20$ & \cellcolor{black!10}$14$ & \cellcolor{black!10}$11$ & \cellcolor{black!10}$4$ & \cellcolor{black!30}$24$ & \cellcolor{black!30}$21$ & \cellcolor{black!10}$14$ & \cellcolor{black!10}$13$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $0$ & $0$ & $2$ & \cellcolor{black!10}$3$ & $1$ & $5$ & $2$ & \cellcolor{black!10}$4$ & $15$ & $13$ & $4$ & $7$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & $2$ & $5$ & $0$ & $0$ & $6$ & $8$ & $0$ & $0$ & $16$ & \cellcolor{black!10}$19$ & $0$ & $0$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!10}$12$ & \cellcolor{black!30}$12$ & $1$ & \cellcolor{black!10}$3$ & \cellcolor{black!10}$12$ & \cellcolor{black!30}$15$ & $1$ & $3$ & $15$ & $17$ & $1$ & $3$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\midrule
+$6$ & $\mathrm{W}_{\mathrm{lscv}}$ & $0$ & $1$ & \cellcolor{black!30}$17$ & \cellcolor{black!30}$20$ & $8$ & $8$ & \cellcolor{black!30}$19$ & \cellcolor{black!30}$22$ & \cellcolor{black!10}$17$ & $16$ & \cellcolor{black!30}$23$ & \cellcolor{black!30}$26$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & \cellcolor{black!10}$8$ & \cellcolor{black!10}$7$ & $3$ & $0$ & \cellcolor{black!10}$15$ & \cellcolor{black!10}$12$ & $7$ & $1$ & \cellcolor{black!30}$21$ & \cellcolor{black!10}$19$ & $12$ & $8$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $0$ & $0$ & \cellcolor{black!10}$7$ & \cellcolor{black!10}$6$ & $6$ & $8$ & \cellcolor{black!10}$12$ & \cellcolor{black!10}$8$ & \cellcolor{black!10}$17$ & $16$ & \cellcolor{black!10}$21$ & \cellcolor{black!10}$21$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & $7$ & \cellcolor{black!10}$7$ & $0$ & $0$ & \cellcolor{black!30}$16$ & \cellcolor{black!30}$16$ & $0$ & $2$ & \cellcolor{black!30}$21$ & \cellcolor{black!30}$20$ & $2$ & $4$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!30}$12$ & \cellcolor{black!30}$12$ & $0$ & $1$ & $12$ & \cellcolor{black!10}$12$ & $0$ & $4$ & $13$ & $14$ & $1$ & $6$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\midrule
+$7$ & $\mathrm{W}_{\mathrm{lscv}}$ & $0$ & $0$ & \cellcolor{black!10}$7$ & \cellcolor{black!10}$7$ & $3$ & $4$ & \cellcolor{black!10}$10$ & \cellcolor{black!10}$11$ & $15$ & $15$ & $15$ & \cellcolor{black!10}$17$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & $0$ & $1$ & $3$ & $1$ & \cellcolor{black!10}$18$ & \cellcolor{black!10}$17$ & $5$ & $3$ & \cellcolor{black!10}$21$ & \cellcolor{black!10}$20$ & $12$ & $9$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $0$ & $1$ & \cellcolor{black!30}$9$ & \cellcolor{black!10}$7$ & $8$ & $5$ & \cellcolor{black!30}$13$ & \cellcolor{black!30}$14$ & $17$ & $17$ & \cellcolor{black!30}$24$ & \cellcolor{black!30}$18$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}$18$ & \cellcolor{black!30}$14$ & $4$ & $2$ & \cellcolor{black!30}$19$ & \cellcolor{black!30}$18$ & $5$ & $4$ & \cellcolor{black!30}$24$ & \cellcolor{black!30}$22$ & \cellcolor{black!10}$16$ & $11$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!10}$9$ & \cellcolor{black!10}$11$ & $4$ & \cellcolor{black!30}$9$ & $11$ & $12$ & $6$ & \cellcolor{black!10}$11$ & $12$ & $12$ & $8$ & $12$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ & $0$ & $0$ & $0$ & $1$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\midrule
+$8$ & $\mathrm{W}_{\mathrm{lscv}}$ & $0$ & $0$ & $3$ & $3$ & $4$ & $4$ & $5$ & $9$ & $19$ & $16$ & $12$ & $12$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & $0$ & $3$ & $1$ & $1$ & \cellcolor{black!10}$16$ & \cellcolor{black!10}$13$ & $2$ & $1$ & \cellcolor{black!10}$24$ & \cellcolor{black!30}$24$ & $5$ & $7$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $0$ & $1$ & \cellcolor{black!30}$13$ & \cellcolor{black!10}$10$ & $12$ & $10$ & \cellcolor{black!30}$16$ & \cellcolor{black!10}$13$ & $22$ & \cellcolor{black!10}$19$ & \cellcolor{black!30}$24$ & \cellcolor{black!10}$16$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}$18$ & \cellcolor{black!30}$14$ & $4$ & $2$ & \cellcolor{black!30}$20$ & \cellcolor{black!30}$19$ & $5$ & $3$ & \cellcolor{black!30}$26$ & \cellcolor{black!30}$24$ & \cellcolor{black!10}$15$ & $10$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!10}$9$ & \cellcolor{black!10}$9$ & \cellcolor{black!10}$6$ & \cellcolor{black!30}$11$ & $9$ & $9$ & \cellcolor{black!10}$8$ & \cellcolor{black!30}$14$ & $12$ & $13$ & $13$ & \cellcolor{black!30}$17$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\midrule
+$9$ & $\mathrm{W}_{\mathrm{lscv}}$ & $0$ & $0$ & $4$ & \cellcolor{black!10}$4$ & $9$ & $11$ & $8$ & $8$ & $23$ & \cellcolor{black!10}$24$ & $14$ & $12$ \\
+ & $\mathrm{IW}_{\mathrm{lscv}}$ & $0$ & $1$ & $0$ & $0$ & \cellcolor{black!10}$16$ & \cellcolor{black!10}$18$ & $1$ & $2$ & $24$ & \cellcolor{black!10}$24$ & $6$ & $5$ \\
+ & $\mathrm{W}_{\mathrm{lcv}}$ & $2$ & $1$ & \cellcolor{black!30}$13$ & $3$ & $15$ & $16$ & \cellcolor{black!30}$16$ & \cellcolor{black!10}$10$ & \cellcolor{black!10}$25$ & \cellcolor{black!10}$24$ & \cellcolor{black!30}$20$ & \cellcolor{black!10}$15$ \\
+ & $\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}$16$ & \cellcolor{black!30}$16$ & $2$ & $2$ & \cellcolor{black!30}$22$ & \cellcolor{black!30}$22$ & $5$ & $4$ & \cellcolor{black!30}$27$ & \cellcolor{black!30}$27$ & $14$ & $7$ \\
+ & $\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!10}$9$ & \cellcolor{black!10}$9$ & \cellcolor{black!10}$6$ & \cellcolor{black!30}$18$ & $9$ & $9$ & \cellcolor{black!10}$14$ & \cellcolor{black!30}$22$ & $13$ & $11$ & \cellcolor{black!10}$19$ & \cellcolor{black!30}$23$ \\
+ & $\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $2$ & $0$ & $0$ & $0$ & $2$ & $1$ & $0$ & $0$ & $2$ & $2$ \\
+ & $\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+ & $\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{0.98\textwidth}
+\fontsize{7.9}{7}\selectfont
+\vspace{-4mm}$^{*}$SD and IQR comparisons exclude $\mathrm{G}_{\mathrm{lscv}}$ and $\mathrm{G}_{\mathrm{lcv}}$ since they always have the worst mean and median.\vspace{-7mm}
+\end{minipage}
+\end{table}

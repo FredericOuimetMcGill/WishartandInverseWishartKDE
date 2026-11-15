@@ -1,0 +1,30 @@
+\begin{table}[H]
+\caption{Mean bandwidth computation time (in milliseconds) for each method, model and sample size, with $\kappa = 4$. Bold indicates the smallest mean among the eight competitors for the corresponding model and sample size.}
+\label{tab:mean.time}
+\footnotesize
+\setlength{\aboverulesep}{1.2pt}
+\setlength{\belowrulesep}{1.2pt}
+\renewcommand{\arraystretch}{0.4}
+\setlength{\tabcolsep}{1.5pt}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{c|cccccccc|cccccccc|cccccccc}
+\toprule
+ & \multicolumn{8}{c|}{$n = 100$} & \multicolumn{8}{c|}{$n = 200$} & \multicolumn{8}{c}{$n = 300$} \\
+\cmidrule(lr){2-9}\cmidrule(lr){10-17}\cmidrule(l){18-25}
+ & \multicolumn{4}{c}{lscv} & \multicolumn{4}{c|}{lcv} & \multicolumn{4}{c}{lscv} & \multicolumn{4}{c|}{lcv} & \multicolumn{4}{c}{lscv} & \multicolumn{4}{c}{lcv} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}\cmidrule(lr){14-17}\cmidrule(lr){18-21}\cmidrule(l){22-25}
+Model & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ & $W$ & $\mathrm{IW}$ & $\mathrm{LG}$ & $\mathrm{G}$ \\
+\midrule
+$(M_{1}, \Sigma_{1})$ & 108 & 287 & 74 & 47 & \textbf{45} & 81 & 49 & 65 & 430 & 1027 & 304 & \textbf{179} & 182 & 265 & 190 & 181 & 992 & 2288 & 700 & \textbf{405} & 418 & 549 & 442 & 424 \\
+$(M_{1}, \Sigma_{2})$ & 107 & 265 & 76 & 47 & \textbf{44} & 82 & 50 & 66 & 431 & 1022 & 305 & \textbf{173} & 182 & 260 & 196 & 205 & 1007 & 2298 & 702 & \textbf{391} & 421 & 548 & 441 & 410 \\
+$(M_{1}, \Sigma_{3})$ & 107 & 265 & 81 & 45 & \textbf{44} & 80 & 51 & 53 & 449 & 1039 & 332 & \textbf{171} & 188 & 267 & 208 & 191 & 1005 & 2282 & 757 & 363 & 424 & 553 & 463 & \textbf{347} \\
+$(M_{2}, \Sigma_{1})$ & 108 & 267 & 72 & 68 & 44 & 81 & 46 & \textbf{37} & 453 & 1036 & 295 & 282 & 187 & 266 & 190 & \textbf{161} & 1011 & 2298 & 676 & 646 & 423 & 551 & 423 & \textbf{373} \\
+$(M_{2}, \Sigma_{2})$ & 107 & 265 & 72 & 69 & 44 & 80 & 47 & \textbf{39} & 439 & 1008 & 295 & 284 & 184 & 261 & 187 & \textbf{164} & 1006 & 2290 & 678 & 660 & 419 & 562 & 426 & \textbf{391} \\
+$(M_{2}, \Sigma_{3})$ & 107 & 262 & 76 & 71 & 44 & 80 & 49 & \textbf{41} & 441 & 1025 & 311 & 286 & 185 & 266 & 198 & \textbf{175} & 1016 & 2274 & 697 & 624 & 420 & 547 & 441 & \textbf{394} \\
+$(M_{3}, \Sigma_{1})$ & 109 & 268 & 73 & 66 & 45 & 81 & 48 & \textbf{37} & 441 & 1037 & 297 & 275 & 186 & 271 & 192 & \textbf{158} & 1006 & 2290 & 670 & 620 & 417 & 550 & 424 & \textbf{357} \\
+$(M_{3}, \Sigma_{2})$ & 107 & 264 & 74 & 67 & 44 & 80 & 47 & \textbf{37} & 447 & 1043 & 301 & 278 & 184 & 266 & 192 & \textbf{162} & 1008 & 2275 & 676 & 609 & 423 & 549 & 429 & \textbf{365} \\
+$(M_{3}, \Sigma_{3})$ & 107 & 265 & 77 & 66 & 44 & 79 & 50 & \textbf{38} & 454 & 1038 & 312 & 265 & 188 & 264 & 200 & \textbf{164} & 1013 & 2289 & 716 & 582 & 416 & 549 & 443 & \textbf{375} \\
+\bottomrule
+\end{tabular}}
+\end{table}

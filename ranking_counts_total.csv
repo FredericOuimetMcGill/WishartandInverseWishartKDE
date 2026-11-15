@@ -1,0 +1,9 @@
+"Method","Mean_minimum","Median_minimum","SD_minimum","IQR_minimum","Mean_within_2pct","Median_within_2pct","SD_within_2pct","IQR_within_2pct","Mean_within_5pct","Median_within_5pct","SD_within_5pct","IQR_within_5pct"
+"W_lscv",8,4,69,76,47,44,82,99,119,110,108,118
+"IW_lscv",40,36,19,8,112,97,33,18,141,135,68,55
+"W_lcv",2,3,45,29,42,44,60,49,96,94,94,77
+"IW_lcv",61,57,10,6,83,85,15,13,115,121,47,32
+"LG_lcv",51,62,17,42,56,68,29,54,72,88,42,61
+"LG_lscv",0,0,2,1,0,0,2,2,0,0,2,3
+"G_lscv",0,0,---,---,0,0,---,---,1,0,---,---
+"G_lcv",0,0,---,---,0,0,---,---,0,0,---,---

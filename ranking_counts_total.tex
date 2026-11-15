@@ -1,0 +1,24 @@
+\begin{table}[!htp]
+\caption{Totals of the counts in Table~\ref{tab:ranking.counts} over $\kappa\in\{4,5,6,7,8,9\}$.}
+\label{tab:ranking.counts.total}
+\centering
+\fontsize{7.9}{7}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.15}
+\begin{tabular}{lcccccccccccc}
+\toprule
+Method & \multicolumn{4}{c}{Minimum} & \multicolumn{4}{c}{Within $2\%$ of the minimum} & \multicolumn{4}{c}{Within $5\%$ of the minimum} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+ & Mean & Median & SD$^{*}$ & IQR$^{*}$ & Mean & Median & SD$^{*}$ & IQR$^{*}$ & Mean & Median & SD$^{*}$ & IQR$^{*}$ \\
+\midrule
+$\mathrm{W}_{\mathrm{lscv}}$ & $8$ & $4$ & \cellcolor{black!30}$69$ & \cellcolor{black!30}$76$ & $47$ & $44$ & \cellcolor{black!30}$82$ & \cellcolor{black!30}$99$ & \cellcolor{black!10}$119$ & $110$ & \cellcolor{black!30}$108$ & \cellcolor{black!30}$118$ \\
+$\mathrm{IW}_{\mathrm{lscv}}$ & $40$ & $36$ & $19$ & $8$ & \cellcolor{black!30}$112$ & \cellcolor{black!30}$97$ & $33$ & $18$ & \cellcolor{black!30}$141$ & \cellcolor{black!30}$135$ & $68$ & $55$ \\
+$\mathrm{W}_{\mathrm{lcv}}$ & $2$ & $3$ & \cellcolor{black!10}$45$ & $29$ & $42$ & $44$ & \cellcolor{black!10}$60$ & $49$ & $96$ & $94$ & \cellcolor{black!10}$94$ & \cellcolor{black!10}$77$ \\
+$\mathrm{IW}_{\mathrm{lcv}}$ & \cellcolor{black!30}$61$ & \cellcolor{black!10}$57$ & $10$ & $6$ & \cellcolor{black!10}$83$ & \cellcolor{black!10}$85$ & $15$ & $13$ & $115$ & \cellcolor{black!10}$121$ & $47$ & $32$ \\
+$\mathrm{LG}_{\mathrm{lcv}}$ & \cellcolor{black!10}$51$ & \cellcolor{black!30}$62$ & $17$ & \cellcolor{black!10}$42$ & $56$ & $68$ & $29$ & \cellcolor{black!10}$54$ & $72$ & $88$ & $42$ & $61$ \\
+$\mathrm{LG}_{\mathrm{lscv}}$ & $0$ & $0$ & $2$ & $1$ & $0$ & $0$ & $2$ & $2$ & $0$ & $0$ & $2$ & $3$ \\
+$\mathrm{G}_{\mathrm{lscv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $1$ & $0$ & \texttt{---} & \texttt{---} \\
+$\mathrm{G}_{\mathrm{lcv}}$ & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} & $0$ & $0$ & \texttt{---} & \texttt{---} \\
+\bottomrule
+\end{tabular}
+\end{table}
