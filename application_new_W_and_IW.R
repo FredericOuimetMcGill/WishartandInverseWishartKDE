@@ -234,6 +234,8 @@ if (printPlot) {
 }
 # Collect the variance legend above the left-hand realized-variance plot.
 g_vcov_cor <- (g_vcov + g_cor + plot_layout(guides = "collect")) &
+  scale_x_date(labels = function(x) paste0(
+    month.abb[as.integer(format(x, "%m"))], ". ", format(x, "%Y"))) &
   theme(
     legend.position = "top",
     legend.direction = "horizontal",
